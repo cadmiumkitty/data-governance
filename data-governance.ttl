@@ -1,0 +1,490 @@
+@prefix dg: <https://dalstonsemantics.com/dg/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+dg:CSV a rdfs:Class ;
+    rdfs:label "CSV" ;
+    rdfs:comment "CSV structure." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:CSVColumn a rdfs:Class ;
+    rdfs:label "CSV Column" ;
+    rdfs:comment "Column that is part of the CSV structure." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:Concept a rdfs:Class ;
+    rdfs:label "Concept" ;
+    rdfs:comment "Anything that data can be about." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:Control a rdfs:Class ;
+    rdfs:label "Control" ;
+    rdfs:comment "A safeguard to protect the quality of data along one or more data quality dimensions." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:CriticalDataElement a rdfs:Class ;
+    rdfs:label "Critical Data Element" ;
+    rdfs:comment "Data Element that, if of insufficient quality, materially impacts the ability of the organisation to achieve its objectives, manage risk or meet regulatory obligations." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataElement .
+
+dg:DataContainer a rdfs:Class ;
+    rdfs:label "Data Container" ;
+    rdfs:comment "Any container that holds data." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:DataElement a rdfs:Class ;
+    rdfs:label "Data Element" ;
+    rdfs:comment "Actual data about some concept residing in a data container and commonly referenced by some term." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:DataStorageContainer a rdfs:Class ;
+    rdfs:label "Data Storage Container" ;
+    rdfs:comment "Any container user to store data." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataContainer .
+
+dg:DataTransferContainer a rdfs:Class ;
+    rdfs:label "Data Transfer Container" ;
+    rdfs:comment "Any container used to transfer data between Systems. Typically transient and refer to message types rather than particular messages." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataContainer .
+
+dg:JSON a rdfs:Class ;
+    rdfs:label "JSON" ;
+    rdfs:comment "JSON structure." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:JSONElement a rdfs:Class ;
+    rdfs:label "JSON Element" ;
+    rdfs:comment "Element that is a part of the JSON structure." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:RelationalDatabase a rdfs:Class ;
+    rdfs:label "Relational Database" ;
+    rdfs:comment "Database management system that supports relational model." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataStorageContainer .
+
+dg:RelationalDatabaseColumn a rdfs:Class ;
+    rdfs:label "Relational Database Column" ;
+    rdfs:comment "Column in a database management system that supports relational model." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataStorageContainer .
+
+dg:RelationalDatabaseSchema a rdfs:Class ;
+    rdfs:label "Relational Database Schema" ;
+    rdfs:comment "Schema in a database management system that supports relational model." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataStorageContainer .
+
+dg:RelationalDatabaseTable a rdfs:Class ;
+    rdfs:label "Relational Database Table" ;
+    rdfs:comment "Table in a database management system that supports relational model." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataStorageContainer .
+
+dg:Snapshot a rdfs:Class ;
+    rdfs:label "Snapshot" ;
+    rdfs:comment "State of the Data Element at a particular point in time against which measures of data quality can be recorded." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:Spreadsheet a rdfs:Class ;
+    rdfs:label "Spreadsheet" ;
+    rdfs:comment "Spreadsheet (e.g. Excel file)." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:SpreadsheetCell a rdfs:Class ;
+    rdfs:label "Spreadsheet Cell" ;
+    rdfs:comment "Spreadsheet cell." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:SpreadsheetColumn a rdfs:Class ;
+    rdfs:label "Spreadsheet Column" ;
+    rdfs:comment "Spreadsheet column." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:SpreadsheetRange a rdfs:Class ;
+    rdfs:label "Spreadsheet Range" ;
+    rdfs:comment "Spreadsheet range of cells." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:System a rdfs:Class ;
+    rdfs:label "System" ;
+    rdfs:comment "Integrated components to collect, store, process and publish data, typically in pursuit of some organisational objectives, to manage risk or to meet regulatory expectations." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataContainer .
+
+dg:Term a rdfs:Class ;
+    rdfs:label "Term" ;
+    rdfs:comment "String of characters in plain language used to refer to Concept." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:Transformation a rdfs:Class ;
+    rdfs:label "Transformation" ;
+    rdfs:comment "Transformation taking place along the flow of data." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:XML a rdfs:Class ;
+    rdfs:label "XML" ;
+    rdfs:comment "XML structure." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:XMLElement a rdfs:Class ;
+    rdfs:label "XML Element" ;
+    rdfs:comment "Element that is a part of the XML structure." ;
+    rdfs:isDefinedBy dg:Scheme ;
+    rdfs:subClassOf dg:DataTransferContainer .
+
+dg:AIModelDataProcessing a skos:Concept ;
+    skos:broader dg:AdaptiveDataProcessing ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "AI Model" .
+
+dg:Accuracy a skos:Concept ;
+    skos:broader dg:DataQualityDimension ;
+    skos:definition "The degree to which data is error free and aligns with what it represents." ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Accuracy" .
+
+dg:AutomatedControl a skos:Concept ;
+    skos:broader dg:ControlActivity ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Automated Control" .
+
+dg:Availability a skos:Concept ;
+    skos:broader dg:DataQualityDimension ;
+    skos:definition "Accessibility and usability of data when required." ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Availability" .
+
+dg:CalculationTransformationAction a skos:Concept ;
+    skos:broader dg:TransformationAction ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Calculation" .
+
+dg:Capture a skos:Concept ;
+    skos:broader dg:DataLifecycleStage ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Capture" .
+
+dg:Completeness a skos:Concept ;
+    skos:broader dg:DataQualityDimension ;
+    skos:definition "The extent to which data is not missing and is of sufficient breadth and depth for the intended purpose." ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Completeness" .
+
+dg:Consistency a skos:Concept ;
+    skos:broader dg:DataQualityDimension ;
+    skos:definition "The degree to which related data is in alignment with respect to dimensions such as definition, value, range, type and format, as applicable." ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Consistency" .
+
+dg:DetectiveControl a skos:Concept ;
+    skos:broader dg:ControlGoal ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Detective Control" .
+
+dg:DirectCopyTransformationAction a skos:Concept ;
+    skos:broader dg:TransformationAction ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Direct Copy" .
+
+dg:Disposal a skos:Concept ;
+    skos:broader dg:DataLifecycleStage ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Disposal" .
+
+dg:Film a skos:Concept ;
+    skos:broader dg:StorageMedium ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Film" .
+
+dg:FitnessForUse a skos:Concept ;
+    skos:broader dg:DataQualityDimension ;
+    skos:definition "The degree to which data is relevant, appropriate for the intended purpose and meets business specifications." ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Fitness for Use" .
+
+dg:FormatConversionTransformationAction a skos:Concept ;
+    skos:broader dg:TransformationAction ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Format Conversion" .
+
+dg:LookupTransformationAction a skos:Concept ;
+    skos:broader dg:TransformationAction ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Lookup" .
+
+dg:MLModelDataProcessing a skos:Concept ;
+    skos:broader dg:AdaptiveDataProcessing ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "ML Model" .
+
+dg:Magnetic a skos:Concept ;
+    skos:broader dg:StorageMedium ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Magnetic" .
+
+dg:ManualControl a skos:Concept ;
+    skos:broader dg:ControlActivity ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Manual Control" .
+
+dg:ManualDataProcessing a skos:Concept ;
+    skos:broader dg:DataProcessing ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Manual Data Processing" .
+
+dg:Paper a skos:Concept ;
+    skos:broader dg:StorageMedium ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Paper" .
+
+dg:PredefinedDataProcessing a skos:Concept ;
+    skos:broader dg:AutomatedDataProcessing ;
+    skos:definition "Processing according to a predefined algorithm explicitly coded in some programming language." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Predefined Data Processing" .
+
+dg:PreventativeControl a skos:Concept ;
+    skos:broader dg:ControlGoal ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Preventative Control" .
+
+dg:Processing a skos:Concept ;
+    skos:broader dg:DataLifecycleStage ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Processing" .
+
+dg:Publication a skos:Concept ;
+    skos:broader dg:DataLifecycleStage ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Publication" .
+
+dg:Retention a skos:Concept ;
+    skos:broader dg:DataLifecycleStage ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Retention" .
+
+dg:SolidState a skos:Concept ;
+    skos:broader dg:StorageMedium ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Solid State" .
+
+dg:Timeliness a skos:Concept ;
+    skos:broader dg:DataQualityDimension ;
+    skos:definition "The degree to which data is up-to-date." ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Timeliness" .
+
+dg:classification a rdf:Property ;
+    rdfs:label "classification" ;
+    rdfs:comment "Classification of resource using a defined taxonomy (e.g. classification of System, Data Element, Control or Transformation)." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:conceptDefinition a rdf:Property ;
+    rdfs:label "concept definition" ;
+    rdfs:comment "Concept definition." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:controlIsForQualityOfDataElement a rdf:Property ;
+    rdfs:label "control is for quality of data element" ;
+    rdfs:comment "What Data Element is the control for." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:controlIsPerformedInSystem a rdf:Property ;
+    rdfs:label "control is performed in system" ;
+    rdfs:comment "System where control is performed." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:dataContainerName a rdf:Property ;
+    rdfs:label "data container name" ;
+    rdfs:comment "Container type specific name (e.g. relational database column name, CSV column name, JSON or XML element name)." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:dataContainerPathExpression a rdf:Property ;
+    rdfs:label "data container path expression" ;
+    rdfs:comment "Container type specific path expression (e.g. fully specified column name for a relational database column, JSONPath for a JSON element, XSLT selector for an XML element)." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:dataElementIsAboutConcept a rdf:Property ;
+    rdfs:label "data element is about concept" ;
+    rdfs:comment "Concept that data in the Data Container is expected to be about." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:dataElementIsReferredToByTerm a rdf:Property ;
+    rdfs:label "data element is referred to by term" ;
+    rdfs:comment "Term that is commonly used to refer to Concept that data in the Data Container is expected to be about." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:dataElementIsResidingInDataContainer a rdf:Property ;
+    rdfs:label "data element is residing in data container" ;
+    rdfs:comment "Data Container where data resides." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasAlternativeTerm a rdf:Property ;
+    rdfs:label "has alternative term" ;
+    rdfs:comment "Alternative Term for this Concept (e.g. a commonly used abbreviation)." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasBroaderConcept a rdf:Property ;
+    rdfs:label "has broader concept" ;
+    rdfs:comment "Concept that has a broader meaning than this Concept." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasNarrowerConcept a rdf:Property ;
+    rdfs:label "has narrower concept" ;
+    rdfs:comment "Concept that has a narrower meaning than this Concept." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasPartyInRoleOfDataOwner a rdf:Property ;
+    rdfs:label "has data owner" ;
+    rdfs:comment "Party playing a Data Owner role." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasPartyInRoleOfDataSteward a rdf:Property ;
+    rdfs:label "has data steward" ;
+    rdfs:comment "Party playing a Data Steward role." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasPreferredTerm a rdf:Property ;
+    rdfs:label "has preferred term" ;
+    rdfs:comment "Preferred Term for this Concept." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:hasRelatedConcept a rdf:Property ;
+    rdfs:label "has related concept" ;
+    rdfs:comment "Concept that is related to this Concept." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:isAlternativeTermForConcept a rdf:Property ;
+    rdfs:label "is alternative term for concept" ;
+    rdfs:comment "Concept for which this Term is an alternative Term (e.g. a commonly used abbreviation)." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:isPartOfDataContainer a rdf:Property ;
+    rdfs:label "is part of data container" ;
+    rdfs:comment "Container that this Container is a part of." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:isPreferredTermForConcept a rdf:Property ;
+    rdfs:label "is preferred term for concept" ;
+    rdfs:comment "Concept for which this Term is a preferred Term." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:literal a rdf:Property ;
+    rdfs:label "literal" ;
+    rdfs:comment "Literal form of the Term." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:snapshotIsOfDataElement a rdf:Property ;
+    rdfs:label "snapshot is of data element" ;
+    rdfs:comment "Data Element this Snapshot is referring to." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:snapshotIsTakenAtDateAndTime a rdf:Property ;
+    rdfs:label "snapshot is taken at date and time" ;
+    rdfs:comment "Timestamp of the snapshot." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:transformationHasRule a rdf:Property ;
+    rdfs:label "transformation rule" ;
+    rdfs:comment "Transformation rule descriptions at arbitrary level of granularity and formalism." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:transformationHasSource a rdf:Property ;
+    rdfs:label "transformation source" ;
+    rdfs:comment "Source of the transformation. Transformation may have multiple sources." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:transformationHasTarget a rdf:Property ;
+    rdfs:label "transformation target" ;
+    rdfs:comment "Target of the transformation. Transformation may have multiple targets." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:transformationIsPerformedInSystem a rdf:Property ;
+    rdfs:label "transformation is performed in system" ;
+    rdfs:comment "System where the transformation is performed." ;
+    rdfs:isDefinedBy dg:Scheme .
+
+dg:AdaptiveDataProcessing a skos:Concept ;
+    skos:broader dg:AutomatedDataProcessing ;
+    skos:definition "Processing according to an adaptive algorithm that does not have to be coded explicitly(e.g. an ML or AI model)." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Adaptive Data Processing" .
+
+dg:AutomatedDataProcessing a skos:Concept ;
+    skos:broader dg:DataProcessing ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Automated Data Processing" .
+
+dg:ControlActivity a skos:Concept ;
+    skos:definition "Enactment of the control that can be classified by the actor performing it (manual versus automated) and by the goal (preventative versus detective)." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Control Activity" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:ControlGoal a skos:Concept ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Control Goal" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:DataProcessing a skos:Concept ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Data Processing" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:StorageMedium a skos:Concept ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Storage Medium" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:TransformationAction a skos:Concept ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Transformation Action" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:DataLifecycleStage a skos:Concept ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Data Lifecycle Stage" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:DataQualityDimension a skos:Concept ;
+    skos:editorialNote "See APRA CPG 235." ;
+    skos:inScheme dg:ConceptScheme ;
+    skos:prefLabel "Data Quality Dimension" ;
+    skos:topConceptOf dg:ConceptScheme .
+
+dg:ConceptScheme a skos:ConceptScheme ;
+    rdfs:label "Data Governance Taxonomy" ;
+    pav:version "1.0.0" ;
+    rdfs:comment "SKOS Concept Scheme to work alongside Data Governance Scheme and provide commonly used taxonomies for Systems, Controls and Transformations." .
+
+dg:Scheme rdfs:label "Data Governance Scheme" ;
+    pav:version "1.0.0" ;
+    rdfs:comment "This scheme is based on the LinkedIn article https://www.linkedin.com/pulse/data-beliefs-eugene-morozov published in 2022. It is formalising Terms, Concepts, Data Containers, Snapshots, Data Elements and Data Ownership." .
+
