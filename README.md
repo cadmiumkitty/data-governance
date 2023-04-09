@@ -1,8 +1,8 @@
-# Data Governance Schema
+# Data Governance Scheme and Taxonomy
 
 ## Introduction
 
-This scheme is based on the [Data Beliefs](https://www.linkedin.com/pulse/data-beliefs-eugene-morozov/) I outlined in the LinkedIn article back in 2022. It is formalising Terms, Concepts, Data Containers, Data Elements and Data Ownership.
+This scheme is based on the [Data Beliefs](https://www.linkedin.com/pulse/data-beliefs-eugene-morozov/) I outlined in the LinkedIn article back in 2022. It formalises Terms, Concepts, Data Containers, Data Elements, Data Ownership, Transformations and Controls. It also provides a set of common hierarchies for things such as Data Quality Dimensions and Controls.
 
 ## Usage
 
@@ -21,7 +21,8 @@ Import the schema into [Confluence](https://www.atlassian.com/software/confluenc
 
 1. Following schema.org naming convention for properties (e.g. classification rather than hasClassification) to increase readability and adoption.
 1. Only using "has" and "is" in property URIs and labels when it helps make the meaning clear (e.g. hasBroaderConcept rather than broader as in SKOS) to increase readability and adoption.
-1. Doing away with domain and range and using names of the classes in the UIRs of the properties and, in most cases, in the labels
+1. Doing away with domain and range and using names of the classes in the UIRs of the properties and, in most cases, in the labels.
+1. TTL file combines the RDFS-based scheme and the SKOS-based taxonomy.
 
 ## Attribution and Disclaimer
 
