@@ -24,7 +24,9 @@ Import the schema into [Confluence](https://www.atlassian.com/software/confluenc
 1. Doing away with domain and range and using names of the classes in the UIRs of the properties and, in most cases, in the labels.
 1. TTL file combines the RDFS-based scheme and the SKOS-based taxonomy.
 
-## Attribution and Disclaimer
+## Attributions and Disclaimers
+
+### APRA
 
 Part of this work, "Data Governance Taxonomy", is a derivative of [Prudential Practice Guide CPG 235 - Managing Data Risk (September 2013)](https://www.apra.gov.au/managing-data-risk) by [Australian Prudential Regulation Authority (APRA)](https://www.apra.gov.au/) used under [Creative Commons Attribution 3.0 Australia Licence (CCBY 3.0)](www.creativecommons.org/licenses/by/3.0/au/)
 
@@ -33,3 +35,13 @@ This prudential practice guide is not legal advice and users are encouraged to o
 APRA disclaims any liability for any loss or damage arising out of any use of this prudential practice guide.
 
 APRA do not endorse this derivative work or its author.
+
+### World Wide Web Consortium
+
+"The RDF Concepts Vocabulary (RDF)" and "The RDF Schema vocabulary (RDFS)" are distributed with the release without changes under [W3C® Software and Document License](https://www.w3.org/Consortium/Legal/2023/software-license).  
+
+The RDF Concepts Vocabulary (RDF): [http://www.w3.org/2000/01/rdf-schema#](http://www.w3.org/2000/01/rdf-schema#)  
+Copyright © 2004-2014 World Wide Web Consortium. All Rights Reserved. This work is distributed under the [W3C® Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
+
+The RDF Concepts Vocabulary (RDF): [http://www.w3.org/1999/02/22-rdf-syntax-ns#](http://www.w3.org/1999/02/22-rdf-syntax-ns#)  
+Copyright © 2019 World Wide Web Consortium. All Rights Reserved. This work is distributed under the [W3C® Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software) in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
