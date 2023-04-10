@@ -330,18 +330,18 @@ dg:dataContainerPathExpression a rdf:Property ;
     rdfs:comment "Container type specific path expression (e.g. fully specified column name for a relational database column, JSONPath for a JSON element, XSLT selector for an XML element)." ;
     rdfs:isDefinedBy dg:Scheme .
 
-dg:dataElementIsAboutConcept a rdf:Property ;
-    rdfs:label "data element is about concept" ;
+dg:dataIsAboutConcept a rdf:Property ;
+    rdfs:label "data is about concept" ;
     rdfs:comment "Concept that data in the Data Container is expected to be about." ;
     rdfs:isDefinedBy dg:Scheme .
 
-dg:dataElementIsReferredToByTerm a rdf:Property ;
-    rdfs:label "data element is referred to by term" ;
+dg:dataIsReferredToByTerm a rdf:Property ;
+    rdfs:label "data is referred to by term" ;
     rdfs:comment "Term that is commonly used to refer to Concept that data in the Data Container is expected to be about." ;
     rdfs:isDefinedBy dg:Scheme .
 
-dg:dataElementIsResidingInDataContainer a rdf:Property ;
-    rdfs:label "data element is residing in data container" ;
+dg:dataIsResidingInDataContainer a rdf:Property ;
+    rdfs:label "data is residing in data container" ;
     rdfs:comment "Data Container where data resides." ;
     rdfs:isDefinedBy dg:Scheme .
 
